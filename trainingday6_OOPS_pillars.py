@@ -121,6 +121,20 @@ def make_sound(animal):
 make_sound(dog)
 make_sound(cat)
 
+#sUPER KEYWORD
+#createa a base class person with a method init that print person created
+# create a deried calss emoloyee that aslo has a init mehod [rioniotnf em,ployee] created
+
+class Person:
+    def __init__(self):
+        print("Person created")
+
+class Employee(Person):
+    def __init__(self):
+        super().__init__()
+        print("Employee created")
+
+emp = Employee()
 
 
 
