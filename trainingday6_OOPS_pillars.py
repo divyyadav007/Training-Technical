@@ -46,42 +46,81 @@
 # car (derived class ) with method drive()
 # Now, createa an object od car and call both methods 
 # 
-class vehicle:
-    def start(self):
-        print("The vehicle is starting")
+# class vehicle:
+#     def start(self):
+#         print("The vehicle is starting")
 
-class car(vehicle):
-    def drive(self):
-        print("The car is driving")
+# class car(vehicle):
+#     def drive(self):
+#         print("The car is driving")
 
-car1 = car()
-car1.start()
-car1.drive()       
-
-
-#Multilevel inheritance
-
-#create a class grandgather , father and son such that each class has itw own show* mthod
-#demonstate how multioleve; inheritance work by call three snow method using a son objects
+# car1 = car()
+# car1.start()
+# car1.drive()       
 
 
-class Grandgather:
-    def show_g(self):
-        print("Grandfather")
+# #Multilevel inheritance
+
+# #create a class grandgather , father and son such that each class has itw own show* mthod
+# #demonstate how multioleve; inheritance work by call three snow method using a son objects
 
 
-class Father:
-    def show_f(self):
-        print("Father")
+# class Grandgather:
+#     def show_g(self):
+#         print("Grandfather")
 
 
-class Son(Grandgather, Father):
-    def show_s(self):
-        print("Son")
+# class Father:
+#     def show_f(self):
+#         print("Father")
 
 
-son = Son()
-son.show_g()
+# class Son(Grandgather, Father):
+#     def show_s(self):
+#         print("Son")
 
-son.show_f()
-son.show_s()
+
+# son = Son()
+# son.show_g()
+
+# son.show_f()
+# son.show_s()
+
+#POLYMORPHISM
+# Method Overriding
+# create a base class Animal with a method sound 
+# then creat two derived class dog and cat that override the sound method
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def sound(self):
+        print(f"{self.name} makes a sound.")
+
+class Dog(Animal):
+    def sound(self):
+        print(f"{self.name} barks.")
+
+class Cat(Animal):
+    def sound(self):
+        print(f"{self.name} meows.")
+
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+dog.sound()
+cat.sound()
+
+#Q8 polymorphism - function with defferent objects
+#write a fucntion make sound(animal) that takes an animal object and call its sound method)
+
+def make_sound(animal):
+    animal.sound()
+
+make_sound(dog)
+make_sound(cat)
+
+
+
+
